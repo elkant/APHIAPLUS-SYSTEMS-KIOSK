@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <servlet>
+        <servlet-name>AddSystem</servlet-name>
+        <servlet-class>AddSystem</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>editurls</servlet-name>
+        <servlet-class>db.editurls</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>updatestatus</servlet-name>
+        <servlet-class>db.updatestatus</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddSystem</servlet-name>
+        <url-pattern>/AddSystem</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>editurls</servlet-name>
+        <url-pattern>/editurls</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>updatestatus</servlet-name>
+        <url-pattern>/updatestatus</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
