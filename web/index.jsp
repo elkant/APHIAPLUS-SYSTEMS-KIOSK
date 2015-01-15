@@ -77,7 +77,7 @@ function openreport(cururl){
 
 var url=cururl.value;
 //alert(url);
-if(url.endsWith("jsp")||url.endsWith("MOBILEREGISTER")||url.endsWith("RAWDATA1")||url.endsWith("monthlymobilelinks")){
+if(url.endsWith("jsp")||url.endsWith("MOBILEREGISTER")||url.endsWith("RAWDATA1")||url.endsWith("monthlymobilelinks")||url.endsWith("allRawData")){
 var win = window.open(url, '_blank');
   win.focus();
 }
@@ -783,8 +783,14 @@ if(session.getAttribute("AccessLevel").toString().equals("0")){
 
                                         <span class="pic-caption rotate-out">
                                             <h5 class="pic-title"></h5>
-                                            <a style="width:200px;" href="<%=hostname%>PWP_Session_Tool/partner_completion_rate.jsp" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">Partner Completion Reports</a>
-                                            <br/>
+                                           <select name="pwp_reports" style="width:200px;" onchange="openreport(this);"> 
+                <option value="">Select The Report to Open</option>
+                <option value="<%=hostname%>PWP_Session_Tool/enrollments.jsp"> Enrollments Report (excel) </option>
+                <option value="<%=hostname%>PWP_Session_Tool/servicesProvided.jsp">Services Provided (excel) </option>
+                <option value="<%=hostname%>PWP_Session_Tool/allRawData">Raw Data (excel) </option>
+                <option value="<%=hostname%>PWP_Session_Tool/kePMS.jsp">KePMS Report (excel)</option>
+              
+            </select>
 
                                         </span>
                                     </div>
