@@ -313,13 +313,13 @@ if(session.getAttribute("AccessLevel").toString().equals("0")){
                                             <section class="about"  style="background-color:#202020 ;color:white ; height:150px; width:220px;">
                                                 <br/>
                                                 <br/>
-                                                <a href="<%=pythonhostname%>" title="PPMP" target="_blank" class="button blue" id="capturefp" style="font-size: 17px;font-family: Georgia; " ><font color="#ff9900"><b><strong>PROJECT PERFORMANCE MONITORING PLAN </font><font color="white"> (PPMP)</strong></b></font></b></a> 
+                                                <a href="<%=hostname%>PPMP" title="PPMP" target="_blank" class="button blue" id="capturefp" style="font-size: 17px;font-family: Georgia; " ><font color="#ff9900"><b><strong>PROJECT PERFORMANCE MONITORING PLAN </font><font color="white"> (PPMP)</strong></b></font></b></a> 
 
                                             </section>
 
                                             <span class="pic-caption right-to-left">
                                                 <h5 class="pic-title"></h5>
-                                                <a href="<%=pythonhostname%>" target="_blank" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">Open ppmp system</a>
+                                                <a href="<%=hostname%>PPMP" target="_blank" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">Open ppmp system</a>
                                                 <br/>
                                                 <br/>
                                                 <a href="pdf/PPMP_GUIDE.pdf" class="linkstyle" target="_blank" style="text-align: center;margin-left: 40px;">ppmp user guide  </a>
@@ -814,7 +814,7 @@ if(session.getAttribute("AccessLevel").toString().equals("0")){
 
                                         <span class="pic-caption right-to-left">
                                             <h5 class="pic-title"></h5>
-                                            <a href="<%=pythonhostname%>/cgi-bin/pmpreportyear.py" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">PMP Reports</a>
+                                            <a href="<%=hostname%>PPMP/pmpreportyear.jsp" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">PMP Reports</a>
                                             <br/>
                                         </span>
                                     </div>
