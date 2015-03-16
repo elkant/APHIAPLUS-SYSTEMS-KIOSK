@@ -489,14 +489,14 @@ if(session.getAttribute("AccessLevel").toString().equals("0")){
                                             <section class="about"  style="background-color:#202020 ;color:white ; height:150px; width:220px;">
                                                 <br/>
                                                 <br/>
-                                                <a href="<%=hostname%>PerformanceSys/login?uname=<%=username%>&pass=<%=pword%>" title="Performance System" target="_blank" class="button blue" id="capturefp" style="font-size: 17px;font-family: Georgia; " ><font color="#ff9900"><strong>OVC PERFORMANCE STANDARDS </font><font color="white"><br/>(OVC PS)</strong></font></b></a> </section>
+                                                <a href="<%=hostname%>OVCLIP/login?uname=<%=username%>&pass=<%=pword%>" title="LIP Supervision Checklist" target="_blank" class="button blue" id="capturefp" style="font-size: 17px;font-family: Georgia; " ><font color="#ff9900"><strong>OVC LIP SUPERVISION CHECKLIST </font><font color="white"><br/>(OVC LSC)</strong></font></b></a> </section>
 
                                             <span class="pic-caption top-to-bottom">
                                                 <h5 class="pic-title"></h5>
-                                                <a href="<%=hostname%>PerformanceSys/login?uname=<%=username%>&pass=<%=pword%>" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">Open ovc system</a>
+                                                <a href="<%=hostname%>OVCLIP/index.htm" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">Open the system</a>
                                                 <br/>
                                                 <br/>
-                                                <a href="pdf/OVC_GUIDE.pdf" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">ovc user guide  </a>
+                                                <a href="#" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">system user guide  </a>
                                             </span>
                                         </div>
                                     </td>
@@ -910,7 +910,7 @@ if(session.getAttribute("AccessLevel").toString().equals("0")){
                                         <span class="pic-caption left-to-right">
                                             <h5 class="pic-title"></h5>
 
-                                            <a href="<%=hostname%>OLMISREPORT/index.jsp" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">PEPFAR Reports</a>
+                                            <a href="<%=hostname%>OLMISREPORT/index.jsp" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">Open Reports Page</a>
                                             <br/>
 <!--                                            <a href="<%=hostname%>PerformanceSys/filterpartnerreports.jsp" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">Partner Reports</a>-->
 
@@ -919,6 +919,33 @@ if(session.getAttribute("AccessLevel").toString().equals("0")){
                                 </td>
                                 <!-----------------------------------------------------------------------------------------------> 
 <%}%>
+<% if(finallist.contains(",7,")){ %>
+
+                                <!-----------------------------------------------------------------------------------------------> 
+
+                               </tr><tr> <td>
+                                    <div class="pic">
+                                        <section class="about"  style="background-color:#202020 ;color:white ; height:270px; width:220px;">
+                                           <br/>
+                                           <br/>
+                                            
+                                            <a href="#" title="OVC LIP SUPERVISION CHECKLIST REPORTS" target="_blank" class="button blue" id="capturefp" style="font-size: 17px;font-family: Georgia; " ><font color="greenyellow"><strong>OVC LSC REPORTS</strong></font></b></a> </section>
+
+                                        <span class="pic-caption left-to-right">
+                                            <h5 class="pic-title"></h5>
+
+                                            <a href="<%=hostname%>OVCLIP/filterreports.htm" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">Open Reports Page</a>
+                                            <br/>
+<!--                                            <a href="<%=hostname%>PerformanceSys/filterpartnerreports.jsp" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">Partner Reports</a>-->
+
+                                        </span>
+                                    </div>
+                                </td>
+                                <!-----------------------------------------------------------------------------------------------> 
+<%}%>
+
+
+
 
                             </tr></table>         
 
@@ -946,9 +973,9 @@ if(session.getAttribute("AccessLevel").toString().equals("0")){
                     int year = cal.get(Calendar.YEAR);
 
                 %>
-                <section class="about" style="width:1250px;" > 
+<!--                <section class="about" style="width:1250px;" > 
                     <p align="center"> &copy <a href="#" ></a> Aphia Plus Nuru Ya Bonde Systems | USAID <%=year%></p>
-                </section>
+                </section>-->
             </div>
         </div>
 
