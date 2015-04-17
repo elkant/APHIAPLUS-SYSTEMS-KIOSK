@@ -77,7 +77,7 @@ function openreport(cururl){
 
 var url=cururl.value;
 //alert(url);
-if(url.endsWith("jsp")||url.endsWith("MOBILEREGISTER")||url.endsWith("RAWDATA1")||url.endsWith("monthlymobilelinks")||url.endsWith("allRawData")){
+if(url.endsWith("jsp")||url.endsWith("htm")||url.endsWith("MOBILEREGISTER")||url.endsWith("RAWDATA1")||url.endsWith("monthlymobilelinks")||url.endsWith("allRawData")){
 var win = window.open(url, '_blank');
   win.focus();
 }
@@ -124,6 +124,7 @@ else{
                // conn.rs = conn.st.executeQuery(get_urls);
 
                 String hostname = "http://fhi360-pc3:8088/";
+                String mainservername = "http://nkufs02:8088/";
                 String phphostname = "http://fhi360-pc3:82/";
                 String pythonhostname = "http://fhi360-pc3:4500/";
 
@@ -754,6 +755,7 @@ if(session.getAttribute("AccessLevel").toString().equals("0")){
                 <option value="">Select The Report to Open</option>
                 <option value="<%=hostname%>HC1_APHIA_PLUS/kePMS_excel_report.jsp">PEPFAR Report (excel) </option>
                 <option value="<%=hostname%>HC1_APHIA_PLUS/agebasedkepms.jsp">Kepms Report By Age  (excel) </option>
+                <option value="<%=hostname%>HC1_APHIA_PLUS/newagebasedkepms.jsp">(New)Kepms Report By Age  (excel) </option>
                 <option value="<%=hostname%>HC1_APHIA_PLUS/partnerbasedreport.jsp">Kepms Report By Target Population (excel) </option>
                 <option value="<%=hostname%>HC1_APHIA_PLUS/groups_overall.jsp">Groups Completion (excel)</option>
                 <option value="<%=hostname%>HC1_APHIA_PLUS/overall_target_bar.jsp">Target Pop. Completion Rate (bar) </option>
@@ -910,7 +912,7 @@ if(session.getAttribute("AccessLevel").toString().equals("0")){
                                         <span class="pic-caption left-to-right">
                                             <h5 class="pic-title"></h5>
 
-                                            <a href="<%=hostname%>OLMISREPORT/index.jsp" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">Open Reports Page</a>
+                                            <a href="<%=mainservername%>OLMISREPORT/index.jsp" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">Open Reports Page</a>
                                             <br/>
 <!--                                            <a href="<%=hostname%>PerformanceSys/filterpartnerreports.jsp" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">Partner Reports</a>-->
 
@@ -929,12 +931,44 @@ if(session.getAttribute("AccessLevel").toString().equals("0")){
                                            <br/>
                                            <br/>
                                             
-                                            <a href="#" title="OVC LIP SUPERVISION CHECKLIST REPORTS" target="_blank" class="button blue" id="capturefp" style="font-size: 17px;font-family: Georgia; " ><font color="greenyellow"><strong>OVC LSC REPORTS</strong></font></b></a> </section>
+                                            <a href="#" title="OVC LIP SUPERVISION CHECKLIST REPORTS" target="_blank" class="button blue" id="capturefp" style="font-size: 17px;font-family: Georgia; " ><font color="greenyellow"><strong>OVC LIP SUPERVISION CHECKLIST REPORTS</strong></font></b></a> </section>
 
                                         <span class="pic-caption left-to-right">
                                             <h5 class="pic-title"></h5>
 
-                                            <a href="<%=hostname%>OVCLIP/filterreports.htm" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">Open Reports Page</a>
+                                            <!--<a href="<%=hostname%>OVCLIP/filterreports.htm" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">Open Reports Page</a>-->
+                                              <select name="hc_reports" style="width:200px;" onchange="openreport(this);"> 
+                <option value="">Select The Report to Open</option>
+            <option title="only one site at a go" value="<%=hostname%>OVCLIP/filterreports.htm">Report Per Site</option>
+            <option title="each site in its worksheet" value="<%=hostname%>OVCLIP/filtermultiplesitesreport.htm">Multiple Sites  Report</option>
+            <option title="summary per IP per domain" value="<%=hostname%>OVCLIP/ipreports.htm">IP/CBOs  Report</option>
+            <option title="each county in its worksheet" value="<%=hostname%>OVCLIP/filtercountyreport.htm">County Report</option>
+            </select>
+                                            <br/>
+<!--                                            <a href="<%=hostname%>PerformanceSys/filterpartnerreports.jsp" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">Partner Reports</a>-->
+
+                                        </span>
+                                    </div>
+                                </td>
+                                <!-----------------------------------------------------------------------------------------------> 
+<%}%>
+<% if(finallist.contains(",7,")){ %>
+
+                                <!-----------------------------------------------------------------------------------------------> 
+
+                                <td>
+                                    <div class="pic">
+                                        <section class="about"  style="background-color:#202020 ;color:white ; height:270px; width:220px;">
+                                           <br/>
+                                           <br/>
+                                            
+                                            <a href="#" title="FACILITIES GEOCODES REPORTS" target="_blank" class="button blue" id="capturefp" style="font-size: 17px;font-family: Georgia; " ><font color="greenyellow"><strong>FACILITY GEOCODES REPORT</strong></font></b></a> </section>
+
+                                        <span class="pic-caption left-to-right">
+                                            <h5 class="pic-title"></h5>
+
+                                            <a href="http://elkant.0fees.us/showcodes.php" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">Open Reports Page</a>
+                                            
                                             <br/>
 <!--                                            <a href="<%=hostname%>PerformanceSys/filterpartnerreports.jsp" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">Partner Reports</a>-->
 
