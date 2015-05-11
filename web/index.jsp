@@ -444,6 +444,7 @@ if(session.getAttribute("AccessLevel").toString().equals("0")){
                             <br/>
                             <br/>
                             <br/>
+                            <br/>
 
 
                         </section>
@@ -701,7 +702,11 @@ if(session.getAttribute("AccessLevel").toString().equals("0")){
                                             <br/>
                                             <br/>
                                             <a style="width: 190px;" href="<%=hostname%>ProgramProgress/1stQuarterCountyReport.jsp" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">Sub-County Reports </a>
-                                        </span>
+										    <br/>
+                                            <br/>
+                                            <a style="width: 190px;" href="<%=hostname%>ProgramProgress/county_report_broken.jsp" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">County Reports (Broken)</a>
+                                                                             
+									   </span>
                                     </div>
                                 </td>
                                 <!-----------------------------------------------------------------------------------------------> 
@@ -726,7 +731,8 @@ if(session.getAttribute("AccessLevel").toString().equals("0")){
                 <option value="<%=hostname%>DIC/Reports/riskreductionReport.jsp">Risk reduction Reports </option>
                 <option value="<%=hostname%>DIC/Reports/SummaryReport.jsp">Summary Report </option>
                 <option value="<%=hostname%>DIC/Reports/KPMSReport.jsp">Kepms Report </option>
-                <option value="<%=hostname%>DIC/Reports/repeatVisit.jsp">Visits Report </option>
+                <option value="<%=hostname%>DIC/Reports/KPMSReportAged.jsp">Kepms Report(Aged) </option>
+			    <option value="<%=hostname%>DIC/Reports/repeatVisit.jsp">Visits Report </option>
                 <option value="<%=hostname%>DIC/Reports/selectParameter.jsp">Charts </option>
 </select>                
      <br/>
@@ -943,6 +949,8 @@ if(session.getAttribute("AccessLevel").toString().equals("0")){
             <option title="each site in its worksheet" value="<%=hostname%>OVCLIP/filtermultiplesitesreport.htm">Multiple Sites  Report</option>
             <option title="summary per IP per domain" value="<%=hostname%>OVCLIP/ipreports.htm">IP/CBOs  Report</option>
             <option title="each county in its worksheet" value="<%=hostname%>OVCLIP/filtercountyreport.htm">County Report</option>
+            <option title="all cbos in one worksheet" value="<%=hostname%>OVCLIP/webcharts.htm">Cbo Charts</option>
+            <option title="each county in its worksheet" value="<%=hostname%>OVCLIP/overallcharts.htm">County Charts</option>
             </select>
                                             <br/>
 <!--                                            <a href="<%=hostname%>PerformanceSys/filterpartnerreports.jsp" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">Partner Reports</a>-->
@@ -967,7 +975,7 @@ if(session.getAttribute("AccessLevel").toString().equals("0")){
                                         <span class="pic-caption left-to-right">
                                             <h5 class="pic-title"></h5>
 
-                                            <a href="http://elkant.0fees.us/showcodes.php" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">Open Reports Page</a>
+                                            <a href="http://elkant.0fees.us/showcodes.php" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">Open Reports</a>
                                             
                                             <br/>
 <!--                                            <a href="<%=hostname%>PerformanceSys/filterpartnerreports.jsp" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">Partner Reports</a>-->
