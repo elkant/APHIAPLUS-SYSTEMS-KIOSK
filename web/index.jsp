@@ -222,7 +222,7 @@ String finallist="";
 
 
                 <section class="about" style="width:1077px;" > 
-                    <h3 align="center"> <img src="images/aphia_logo.png" alt="logo" height="85px" width="270px"/></h3>
+                    <h3 align="left" style="font-size: 45px;color:#cc0000;font-family: bree serif;"><img src="images/aphia_logo.png" alt="logo" height="85px" width="270px"/> &nbsp APHIAPLUS SYSTEMS KIOSK  </h3>
                 </section>             
                 <br/>
 
@@ -979,7 +979,7 @@ if(session.getAttribute("AccessLevel").toString().equals("0")){
                                         <span class="pic-caption left-to-right">
                                             <h5 class="pic-title"></h5>
 
-                                            <a href="<%=mainservername%>OLMISREPORT/index.jsp" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">Open Reports Page</a>
+                                            <a href="<%=mainservername%>OLMISREPORT/index.jsp" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">Reports Page</a>
                                             <br/>
 <!--                                            <a href="<%=hostname%>PerformanceSys/filterpartnerreports.jsp" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">Partner Reports</a>-->
 
