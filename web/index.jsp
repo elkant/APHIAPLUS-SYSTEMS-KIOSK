@@ -128,6 +128,12 @@ else{
                 String phphostname = "http://fhi360-pc3:82/";
                 String pythonhostname = "http://fhi360-pc3:4500/";
 
+                
+                //String hostname = "http://localhost:8080/";
+               // String mainservername = "http://localhost:8080/";
+               // String phphostname = "http://localhost:80/";
+                //String pythonhostname = "http://localhost:4500/";
+                
                // if (conn.rs.next()) {
                     //hostname = conn.rs.getString("jsp_url");
                     //phphostname = conn.rs.getString("php_url");
@@ -263,9 +269,9 @@ if(session.getAttribute("AccessLevel").toString().equals("0")){
                     
        
                     <ul style="height:60px;">
-                        <li><a href="#tabs-1" title="PPMT , PPMP , PROMIS" style="width:200px;text-align: center;">MANAGEMENT</a></li>
+                        <li><a href="#tabs-1" title="PPMT , PPMP , PROMIS,IMIS" style="width:200px;text-align: center;">MANAGEMENT</a></li>
                         <li><a href="#tabs-2" title="DIC , HC1 , LSE"  style="width:250px;text-align: center;">HEALTH COMMUNICATION</a></li>
-                        <li><a href="#tabs-3"  title="CBS , OVC , PWP " style="width:190px;text-align: center;">SDH</a></li>
+                        <li><a href="#tabs-3"  title="CBS , OVC , PWP,FILING TRACKER " style="width:190px;text-align: center;">SDH</a></li>
                         <li><a href="#tabs-4" title="ART , HCA , MNCH , CHECKLIST, TQA"  style="width:194px;text-align: center;">CLINICAL</a></li>
                         <li><a href="#tabs-5" title="REPORTS FOR ALL SYSTEMS" style="width:200px;text-align: center;">REPORTS</a></li>
 
@@ -337,7 +343,7 @@ if(session.getAttribute("AccessLevel").toString().equals("0")){
                                                
                                                 <br/>
                                                 <br/>
-                                                <a  href="<%=hostname%>PRF/login?uname=<%=username%>&pass=<%=pword%>" title="PROMIS" target="_blank" class="button blue" id="capturefp" style="font-size: 17px;font-family: Georgia;" ><font color="ff9900"><strong>PROMIS </font><br/><font color="white"></strong></font></b></a>
+                                                <a  href="<%=hostname%>PRF/login?uname=<%=username%>&pass=<%=pword%>" title="PROMIS" target="_blank" class="button blue" id="capturefp" style="font-size: 17px;font-family: Georgia;" ><font color="ff9900">PROCUREMENT MANAGEMENT INFORMATION SYSTEM<strong></font><br/><font color="white">PROMIS </strong></font></b></a>
 
                                             </section>
 
@@ -353,7 +359,36 @@ if(session.getAttribute("AccessLevel").toString().equals("0")){
                                     <!-----------------------------------------------------------------------------------------------> 
                                     
 
+ <%}%></tr><tr>
+                                    
+                                    
+ <%if(finallist.contains(",2,")){ %>   
+
+                                            <!-----------------------------------------------------------------------------------------------> 
+                                            <td>
+                                        <div class="pic">
+                                            <section class="about"  style="background-color:#202020 ;color:white ; height:150px; width:220px;">
+                                               
+                                                <br/>
+                                                <br/>
+                                                <a  href="<%=hostname%>Internal_System" title="IMIS" target="_blank" class="button blue" id="capturefp" style="font-size: 17px;font-family: Georgia;" ><font color="ff9900"><strong>INTEGRATED MANAGEMENT INFORMATION SYSTEM </font><br/><font color="white">IMIS</strong></font></b></a>
+
+                                            </section>
+
+                                            <span class="pic-caption rotate-out">
+                                                <h5 class="pic-title"></h5>
+                                                <a href="<%=hostname%>InternalSystem" class="linkstyle" target="_blank" style="text-align: center;margin-left: 40px;">Open imis </a>
+                                                <br/>
+                                                <br/>
+                                                <a href="#" title="user guide not available now! Please check again later." class="linkstyle" target="" style="text-align: center;margin-left: 40px;">imis user guide  </a>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <!-----------------------------------------------------------------------------------------------> 
+                                    
+
  <%}%>
+                                    
                                 </tr></table>
                             <br/>
                             <br/>
@@ -520,6 +555,32 @@ if(session.getAttribute("AccessLevel").toString().equals("0")){
                                                 <br/>
                                                 <br/>
                                                 <a href="pdf/PWP_GUIDE.pdf" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">pwp user guide  </a>
+                                            </span>
+                                        </div>
+                                    </td></tr>
+                                    <!-----------------------------------------------------------------------------------------------> 
+                                <%}%>
+
+                                    <!-----------------------------------------------------------------------------------------------> 
+ <!-----------------------------------------------------------------------------------------------> 
+
+<%if(finallist.contains(",8,")){ %>
+
+                                    <!-----------------------------------------------------------------------------------------------> 
+                                <tr>
+                                    <td>
+                                        <div class="pic">
+                                            <section class="about"  style="background-color:#202020 ;color:white ; height:150px; width:220px;">
+                                                <br/>
+                                                <br/>
+                                                <a href="<%=hostname%>OVCFilingTracker/selectParameters.jsp" title="OVC FILING TRACKER" target="_blank" class="button blue" id="capturefp" style="font-size: 17px;font-family:Georgia; " ><font color="#ff9900"><strong>OVC FILING TRACKER </font><font color="white"><br/></strong></font></b></a> </section>
+
+                                            <span class="pic-caption bottom-to-top">
+                                                <h5 class="pic-title"></h5>
+                                                <a href="<%=hostname%>OVCFilingTracker/selectParameters.jsp" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">Open tracker system</a>
+                                                <br/>
+                                                <br/>
+<!--                                                <a href="pdf/PWP_GUIDE.pdf" target="_blank" class="linkstyle" style="text-align: center;margin-left: 40px;">pwp user guide  </a>-->
                                             </span>
                                         </div>
                                     </td>
@@ -985,7 +1046,30 @@ if(session.getAttribute("AccessLevel").toString().equals("0")){
                                 </td>
                                 <!-----------------------------------------------------------------------------------------------> 
 <%}%>
+  <% if(finallist.contains(",8,")){ %>
+                                <td>
+                                    <div class="pic">
+                                        <section class="about"  style="background-color:#202020 ;color:white ; height:270px; width:220px;">
+                                           <br/>
+                                           <br/>
+                                            <a href="#" title="OVC FILING TRACKER REPORTS" target="_blank" class="button blue" id="capturefp" style="font-size: 17px;font-family: Georgia; " ><font color="greenyellow"><strong> OVC FILING TRACKER REPORTS</strong></b></a> </section>
 
+                                        <span class="pic-caption rotate-out">
+                                            <h5 class="pic-title"></h5>
+                                           <select name="tracker_reports" style="width:200px;" onchange="openreport(this);"> 
+                <option value="">Select The Report to Open</option>
+                <option value="<%=hostname%>OVCFilingTracker/cbodetails.jsp"> CBO Detailed Report  </option>
+                <option value="<%=hostname%>OVCFilingTracker/cboreport.jsp">CBO report   </option>
+                <option value="<%=hostname%>OVCFilingTracker/countyreport.jsp">County Report  </option>
+              
+              
+            </select>
+
+                                        </span>
+                                    </div>
+                                </td>
+
+<%}%>
 
 
 
