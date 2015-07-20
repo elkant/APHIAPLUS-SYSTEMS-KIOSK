@@ -821,10 +821,11 @@ if(session.getAttribute("AccessLevel").toString().equals("0")){
             <select name="hc_reports" style="width:200px;" onchange="openreport(this);"> 
                 <option value="">Select The Report to Open</option>
                 <option value="<%=hostname%>HC1_APHIA_PLUS/kePMS_excel_report.jsp">PEPFAR Report (excel) </option>
-                <option value="<%=hostname%>HC1_APHIA_PLUS/agebasedkepms.jsp">Kepms Report By Age  (excel) </option>
+                <!--<option value="HC1_APHIA_PLUS/agebasedkepms.jsp">Kepms Report By Age  (excel) </option>-->
                 <option value="<%=hostname%>HC1_APHIA_PLUS/newagebasedkepms.jsp">(New)Kepms Report By Age  (excel) </option>
                 <option value="<%=hostname%>HC1_APHIA_PLUS/partnerbasedreport.jsp">Kepms Report By Target Population (excel) </option>
-                <option value="<%=hostname%>HC1_APHIA_PLUS/groups_overall.jsp">Groups Completion (excel)</option>
+                <option value="<%=hostname%>HC1_APHIA_PLUS/datimreport_age.jsp">Datim Report (Age Bracket) per ward  (excel) </option>
+                <option value="<%=hostname%>HC1_APHIA_PLUS/datimreport_noage.jsp">Datim Report per ward (excel)</option>
                 <option value="<%=hostname%>HC1_APHIA_PLUS/overall_target_bar.jsp">Target Pop. Completion Rate (bar) </option>
                 <option value="<%=hostname%>HC1_APHIA_PLUS/county_bar.jsp">County Completion Rate (bar) </option>           
                 <option value="<%=hostname%>HC1_APHIA_PLUS/kePMS_bar.jsp">PEPFAR Report (bar) </option>
