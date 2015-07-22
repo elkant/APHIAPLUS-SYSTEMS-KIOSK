@@ -793,7 +793,8 @@ if(session.getAttribute("AccessLevel").toString().equals("0")){
                 <option value="<%=hostname%>DIC/Reports/SummaryReport.jsp">Summary Report </option>
                 <option value="<%=hostname%>DIC/Reports/KPMSReport.jsp">Kepms Report </option>
                 <option value="<%=hostname%>DIC/Reports/KPMSReportAged.jsp">Kepms Report(Aged) </option>
-			    <option value="<%=hostname%>DIC/Reports/repeatVisit.jsp">Visits Report </option>
+                <option value="<%=hostname%>DIC/Reports/KPMSReportWards.jsp">DATIM Kepms Report </option>
+                <option value="<%=hostname%>DIC/Reports/repeatVisit.jsp">Visits Report </option>
                 <option value="<%=hostname%>DIC/Reports/selectParameter.jsp">Charts </option>
 </select>                
      <br/>
