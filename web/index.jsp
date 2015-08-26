@@ -857,9 +857,11 @@ if(session.getAttribute("AccessLevel").toString().equals("0")){
                                            <select name="pwp_reports" style="width:200px;" onchange="openreport(this);"> 
                 <option value="">Select The Report to Open</option>
                 <option value="<%=hostname%>PWP_Session_Tool/enrollments.jsp"> Enrollments Report (excel) </option>
-                <option value="<%=hostname%>PWP_Session_Tool/servicesProvided.jsp">Services Provided (excel) </option>
-                <option value="<%=hostname%>PWP_Session_Tool/allRawData">Raw Data (excel) </option>
+                <!--<option value="<%=hostname%>PWP_Session_Tool/servicesProvided.jsp">Services Provided (excel) </option>-->
+                <option value="<%=hostname%>PWP_Session_Tool/rawData.jsp">Raw Data (excel) </option>
                 <option value="<%=hostname%>PWP_Session_Tool/kePMS.jsp">KePMS Report (excel)</option>
+                <option value="<%=hostname%>PWP_Session_Tool/OtherReports.jsp">Other Reports</option>
+                <!--<option value="<%=hostname%>PWP_Session_Tool/notReached">Clients not reached report (excel)</option>-->
               
             </select>
 
